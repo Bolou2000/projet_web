@@ -1,0 +1,345 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  color: #333333;
+  background-color: #ffffff;
+}
+
+header {
+  background-color: #1e5fa8;
+  color: #ffffff;
+  padding: 20px 0;
+  border-bottom: 5px solid #f39c12;
+}
+
+header img {
+  display: inline-block;
+  margin: 0 auto -73px auto;
+  max-width: 175px;
+  height: auto;
+}
+
+header h1 {
+  text-align: center;
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+nav {
+  background-color: #2c3e50;
+  padding: 10px 0;
+}
+
+nav ul {
+  list-style: none;
+  text-align: center;
+}
+
+nav ul li {
+  display: inline-block;
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  padding: 10px 20px;
+  display: block;
+  border-radius: 5px;
+}
+
+nav ul li a:hover {
+  background-color: #f39c12;
+  color: #2c3e50;
+}
+
+nav ul li a.active {
+  background-color: #f39c12;
+  color: #2c3e50;
+}
+
+main {
+  max-width: 1200px;
+  margin: 30px auto;
+  padding: 20px;
+  min-height: 500px;
+}
+
+main h2 {
+  color: #1e5fa8;
+  font-size: 2em;
+  margin-bottom: 15px;
+  border-bottom: 3px solid #f39c12;
+  padding-bottom: 10px;
+}
+
+main h3 {
+  color: #2c3e50;
+  font-size: 1.5em;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+main p {
+  margin-bottom: 15px;
+  text-align: justify;
+}
+
+main img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  margin: 20px 0;
+}
+
+#activites-speciales {
+  display: none;
+}
+
+#texte-btn {
+  text-align: center;
+  margin-top: 20px;
+}
+
+#btn-activites {
+  background-color: #1e5fa8;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+table th {
+  background-color: #1e5fa8;
+  color: #ffffff;
+  padding: 12px;
+  text-align: left;
+  border: 1px solid #dddddd;
+}
+
+table td {
+  padding: 10px;
+  border: 1px solid #dddddd;
+}
+
+table td[colspan="2"] {
+  text-align: center;
+}
+
+table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+table tr:hover {
+  background-color: #e8f4f8;
+}
+
+ul.liste-ordonnee, ol.liste-ordonnee {
+  margin: 15px 0 15px 40px;
+}
+
+ul.liste-ordonnee li, ol.liste-ordonnee li {
+  margin-bottom: 8px;
+}
+
+form {
+  background-color: #f9f9f9;
+  padding: 30px;
+  border-radius: 10px;
+  margin: 20px 0;
+  border: 2px solid #1e5fa8;
+}
+
+form label {
+  display: block;
+  margin-bottom: 5px;
+  color: #2c3e50;
+  font-weight: bold;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="date"],
+form input[type="number"],
+form input[type="range"],
+form input[type="color"],
+form textarea,
+form select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  font-size: 1em;
+}
+
+form input[type="radio"],
+form input[type="checkbox"] {
+  margin-right: 8px;
+}
+
+form input[type="submit"] {
+  background-color: #1e5fa8;
+  color: #ffffff;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.1em;
+  margin-top: 10px;
+}
+
+form input[type="submit"]:hover {
+  background-color: #f39c12;
+  color: #2c3e50;
+}
+
+form p {
+  font-size : 0.9em;
+  color: grey;
+}
+
+form > h3 {
+  text-decoration: underline;
+}
+.groupe-radio, .groupe-checkbox {
+  margin-bottom: 15px;
+}
+
+.groupe-checkbox label, .groupe-radio label {
+
+  display: inline;
+}
+
+footer {
+  background-color: #2c3e50;
+  color: #ffffff;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 40px;
+  border-top: 5px solid #f39c12;
+}
+
+footer p {
+  margin: 5px 0;
+}
+
+.hidden {
+  display: none;
+}
+
+.image-container {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.info-box {
+  background-color: #e8f4f8;
+  border-left: 5px solid #1e5fa8;
+  padding: 15px;
+  margin: 20px 0;
+}
+
+#message-confirmation {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  header h1 {
+    font-size: 1.8em;
+  }
+
+  nav ul li {
+    display: block;
+    margin: 5px 0;
+  }
+
+  main {
+    padding: 10px;
+  }
+
+  main h2 {
+    font-size: 1.5em;
+  }
+
+  main h3 {
+    font-size: 1.2em;
+  }
+
+  table {
+    font-size: 0.9em;
+  }
+
+  form {
+    padding: 15px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  header h1 {
+    font-size: 1.4em;
+  }
+
+  main h2 {
+    font-size: 1.3em;
+  }
+
+  nav ul li a {
+    padding: 8px 15px;
+    font-size: 0.9em;
+  }
+
+  table th, table td {
+    padding: 6px;
+    font-size: 0.8em;
+  }
+}
+
+main > section {
+  margin-bottom: 30px;
+}
+
+em {
+  font-style: italic;
+  color: #555555;
+}
+
+strong {
+  font-weight: bold;
+  color: #1e5fa8;
+}
+
+abbr[title] {
+  text-decoration: underline dotted;
+  cursor: help;
+}
+
+q {
+  font-style: italic;
+  color: #666666;
+}
+
+address {
+  font-style: normal;
+  background-color: #f5f5f5;
+  padding: 15px;
+  border-radius: 5px;
+  margin: 15px 0;
+}
