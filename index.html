@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="images/logo_page2.png" />
+    <title>Scouts et Guides de France</title>
+    <link rel="stylesheet"  href="css/styles.css" type="text/css"  media="screen" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      $(function() {
+        $("main").load("accueil.html");
+        $("#accueil").click(function(){ $("main").load("accueil.html");      }); 
+    	  $("#activites").click(function(){ $("main").load("activites.html");      }); 
+        $("#histoire").click(function(){ $("main").load("histoire.html");      });  
+        $("#inscription").click(function(){ $("main").load("inscription.html");      });   
+
+        $(document).on('click', '#btn-activites', function() {
+        $('#activites-speciales').slideToggle('slow');
+
+        if ($(this).text() === 'Découvrir plus d\'activités') {
+          $(this).text('Masquer les activités spéciales');
+        } else {
+          $(this).text('Découvrir plus d\'activités');
+        }});
+
+      $(document).on('submit', '#formulaire-inscription', function(e) {
+        e.preventDefault();
+
+        $(this).fadeOut('slow', function() {
+          $(this).css('display', 'none');
+          $('#message-confirmation').fadeIn('slow');
+        });
+      });
+
+        $('nav ul li a').hover(
+          function() {
+            $(this).css('transform', 'scale(1.25)');
+          },
+          function() {
+            $(this).css('transform', 'scale(1)');
+          }
+        );
+
+        $('table tr').hover(
+          function() {
+            $(this).css('background-color', '#e8f4f8');
+          },
+          function() {
+            if ($(this).index() % 2 === 0) {
+              $(this).css('background-color', '');
+            } else {
+              $(this).css('background-color', '#f2f2f2');
+            }
+          }
+        );
+      });
+    </script>
+</head>
+
+
+<body>
+
+  <header>
+    <h1>Scouts et Guides de France</h1>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a id="accueil">Accueil</a></li>
+      <li><a id="histoire">Notre Histoire</a></li>
+      <li><a id="activites">Activités</a></li>
+      <li><a id="inscription">Inscription</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Scouts et Guides de France. Tous droits réservés.</p>
+    <p>Un mouvement d'éducation populaire ouvert à tous</p>
+  </footer>
+
+</body>
+</html>

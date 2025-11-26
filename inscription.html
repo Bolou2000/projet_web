@@ -1,0 +1,113 @@
+
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Inscription</title>
+  </head>   
+    
+    <h2>Rejoignez l'aventure scoute</h2>
+
+    <section>
+      <p>
+        Vous souhaitez <strong>inscrire votre enfant</strong> chez les Scouts et Guides de France&nbsp;?
+        Remplissez le formulaire ci-dessous et nous vous recontacterons rapidement pour finaliser l'inscription.
+      </p>
+
+      <p>
+        <em>L'inscription est ouverte toute l'année</em>, mais nous vous recommandons de vous inscrire avant
+        le mois de <strong>septembre</strong> pour profiter pleinement de l'année scoute.
+      </p>
+
+      <form id="formulaire-inscription" action="#" method="post">
+        <h3>Informations sur l'enfant</h3>
+
+        <label for="prenom">Prénom de l'enfant&nbsp;:</label>
+        <input type="text" id="prenom" name="prenom" required minlength="2">
+
+        <label for="nom">Nom de famille&nbsp;:</label>
+        <input type="text" id="nom" name="nom" required minlength="2">
+
+        <label for="date-naissance">Date de naissance&nbsp;:</label>
+        <input type="date" id="date-naissance" name="date-naissance" required>
+
+        <label for="age">Âge de l'enfant&nbsp;:</label>
+        <input type="number" id="age" name="age" min="6" max="25" required>
+
+        <label>Sexe&nbsp;:</label>
+        <div class="groupe-radio">
+          <input type="radio" id="sexe-f" name="sexe" value="feminin" required>
+          <label for="sexe-f" >Féminin</label>
+          <input type="radio" id="sexe-m" name="sexe" value="masculin" required>
+          <label for="sexe-m">Masculin</label>
+          <input type="radio" id="sexe-a" name="sexe" value="autre" required>
+          <label for="sexe-a">Autre</label>
+        </div>
+
+        <label for="branche">Branche souhaitée&nbsp;:</label>
+        <select id="branche" name="branche" required>
+          <option value="">-- Sélectionnez une branche --</option>
+          <option value="farfadets">Farfadets (6-8&nbsp;ans)</option>
+          <option value="louveteaux">Louveteaux/Jeannettes (8-11&nbsp;ans)</option>
+          <option value="scouts">Scouts/Guides (11-14&nbsp;ans)</option>
+          <option value="pionniers">Pionniers/Caravelles (14-17&nbsp;ans)</option>
+          <option value="compagnons">Compagnons (17-21&nbsp;ans)</option>
+        </select>
+
+        <h3>Informations sur le responsable légal</h3>
+
+        <label for="nom-parent">Nom du responsable légal&nbsp;:</label>
+        <input type="text" id="nom-parent" name="nom-parent" required>
+
+        <label for="email">Adresse email&nbsp;:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="telephone">Numéro de téléphone&nbsp;:</label>
+        <input type="text" id="telephone" name="telephone" pattern="[0-9]{10}" placeholder="0123456789">
+
+        <h3>Préférences et informations complémentaires</h3>
+
+        <label for="motivation">Pourquoi souhaitez-vous rejoindre les scouts&nbsp;?</label>
+        <textarea id="motivation" name="motivation" rows="4" placeholder="Partagez vos motivations..."></textarea>
+
+        <label>Activités préférées (plusieurs choix possibles)&nbsp;:</label>
+        <div class="groupe-checkbox">
+          <input type="checkbox" id="act-nature" name="activites" value="nature">
+          <label for="act-nature">Activités nature</label><br>
+
+          <input type="checkbox" id="act-sport" name="activites" value="sport">
+          <label for="act-sport">Sports et grands jeux</label><br>
+
+          <input type="checkbox" id="act-camping" name="activites" value="camping">
+          <label for="act-camping">Camping et bivouac</label><br>
+
+          <input type="checkbox" id="act-manuel" name="activites" value="manuel">
+          <label for="act-manuel">Activités manuelles</label><br>
+
+          <input type="checkbox" id="act-solidaire" name="activites" value="solidaire">
+          <label for="act-solidaire">Projets solidaires</label>
+        </div>
+
+        <label for="niveau-engagement">Niveau d'engagement souhaité&nbsp;:</label>
+        <input type="range" id="niveau-engagement" name="niveau-engagement" min="1" max="5" value="3">
+        <p>1&nbsp;=&nbsp;Occasionnel | 5&nbsp;=&nbsp;Très&nbsp;engagé</p>
+
+        <label for="couleur-foulard">Couleur de foulard préférée&nbsp;:</label>
+        <input type="color" id="couleur-foulard" name="couleur-foulard" value="#1e5fa8">
+
+        <label>Acceptez-vous de recevoir notre newsletter&nbsp;?</label>
+        <div class="groupe-radio">
+          <input type="radio" id="newsletter-oui" name="newsletter" value="oui">
+          <label for="newsletter-oui">Oui</label>
+          <input type="radio" id="newsletter-non" name="newsletter" value="non" checked>
+          <label for="newsletter-non">Non</label>
+        </div>
+
+        <input type="submit" value="Envoyer ma demande d'inscription">
+      </form>
+
+      <div id="message-confirmation" class="info-box">
+        <h3>Merci pour votre inscription&nbsp;!</h3>
+        <p>Nous avons bien reçu votre demande. Un responsable de groupe vous contactera dans les prochains jours.</p>
+      </div>
+    </section>
